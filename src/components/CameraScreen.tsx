@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect } from 'react';
-import { motion } from 'motion/react';
-import { ArrowLeft, SwitchCamera, Sparkles, Upload } from 'lucide-react';
+import { ArrowLeft, SwitchCamera, Upload } from "lucide-react";
+import { motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 
 interface CameraScreenProps {
   onCapture: (photoData: string) => void;
@@ -12,43 +12,49 @@ export function CameraScreen({ onCapture, onBack }: CameraScreenProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [stream, setStream] = useState<MediaStream | null>(null);
-  const [facingMode, setFacingMode] = useState<'user' | 'environment'>('user');
+  const [facingMode, setFacingMode] = useState<"user" | "environment">("user");
   const [cameraError, setCameraError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
-
-  useEffect(() => {
-    startCamera();
-    return () => {
-      if (stream) {
-        stream.getTracks().forEach(track => track.stop());
-      }
-    };
-  }, [facingMode]);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const startCamera = async () => {
     try {
       setCameraError(false);
       const mediaStream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode }
+        video: { facingMode },
       });
       setStream(mediaStream);
       if (videoRef.current) {
         videoRef.current.srcObject = mediaStream;
       }
     } catch (error) {
-      console.error('Error accessing camera:', error);
+      console.error("Error accessing camera:", error);
       setCameraError(true);
       if (error instanceof DOMException) {
-        if (error.name === 'NotAllowedError') {
-          setErrorMessage('Camera permission was denied. Please allow camera access or upload a photo instead.');
-        } else if (error.name === 'NotFoundError') {
-          setErrorMessage('No camera found on this device. Please upload a photo instead.');
+        if (error.name === "NotAllowedError") {
+          setErrorMessage(
+            "Camera permission was denied. Please allow camera access or upload a photo instead."
+          );
+        } else if (error.name === "NotFoundError") {
+          setErrorMessage(
+            "No camera found on this device. Please upload a photo instead."
+          );
         } else {
-          setErrorMessage('Unable to access camera. Please upload a photo instead.');
+          setErrorMessage(
+            "Unable to access camera. Please upload a photo instead."
+          );
         }
       }
     }
   };
+
+  useEffect(() => {
+    startCamera();
+    return () => {
+      if (stream) {
+        stream.getTracks().forEach((track) => track.stop());
+      }
+    };
+  }, [facingMode]);
 
   const handleCapture = () => {
     if (videoRef.current && canvasRef.current) {
@@ -56,12 +62,12 @@ export function CameraScreen({ onCapture, onBack }: CameraScreenProps) {
       const canvas = canvasRef.current;
       canvas.width = video.videoWidth;
       canvas.height = video.videoHeight;
-      const ctx = canvas.getContext('2d');
+      const ctx = canvas.getContext("2d");
       if (ctx) {
         ctx.drawImage(video, 0, 0);
-        const photoData = canvas.toDataURL('image/jpeg');
+        const photoData = canvas.toDataURL("image/jpeg");
         if (stream) {
-          stream.getTracks().forEach(track => track.stop());
+          stream.getTracks().forEach((track) => track.stop());
         }
         onCapture(photoData);
       }
@@ -75,7 +81,7 @@ export function CameraScreen({ onCapture, onBack }: CameraScreenProps) {
       reader.onload = (e) => {
         const photoData = e.target?.result as string;
         if (stream) {
-          stream.getTracks().forEach(track => track.stop());
+          stream.getTracks().forEach((track) => track.stop());
         }
         onCapture(photoData);
       };
@@ -85,9 +91,9 @@ export function CameraScreen({ onCapture, onBack }: CameraScreenProps) {
 
   const toggleCamera = () => {
     if (stream) {
-      stream.getTracks().forEach(track => track.stop());
+      stream.getTracks().forEach((track) => track.stop());
     }
-    setFacingMode(prev => prev === 'user' ? 'environment' : 'user');
+    setFacingMode((prev) => (prev === "user" ? "environment" : "user"));
   };
 
   return (
@@ -98,9 +104,7 @@ export function CameraScreen({ onCapture, onBack }: CameraScreenProps) {
       transition={{ duration: 0.3 }}
       className="relative w-full h-screen overflow-hidden"
       style={{
-        background: cameraError 
-          ? 'black'
-          : 'black'
+        background: cameraError ? "black" : "black",
       }}
     >
       {!cameraError ? (
@@ -113,7 +117,7 @@ export function CameraScreen({ onCapture, onBack }: CameraScreenProps) {
             muted
             className="absolute inset-0 w-full h-full object-cover"
           />
-          
+
           <canvas ref={canvasRef} className="hidden" />
 
           {/* Yellow overlay for Snapchat vibe */}
@@ -149,7 +153,7 @@ export function CameraScreen({ onCapture, onBack }: CameraScreenProps) {
               {/* Rounded square guide like Snapchat */}
               <div className="relative w-80 h-80">
                 <div className="w-full h-full rounded-[3rem] border-4 border-yellow-400/60 border-dashed" />
-                
+
                 {/* Corner accents */}
                 <div className="absolute -top-2 -left-2 w-12 h-12 border-t-4 border-l-4 border-yellow-400 rounded-tl-3xl" />
                 <div className="absolute -top-2 -right-2 w-12 h-12 border-t-4 border-r-4 border-yellow-400 rounded-tr-3xl" />
@@ -168,7 +172,7 @@ export function CameraScreen({ onCapture, onBack }: CameraScreenProps) {
               className="px-6 py-3 rounded-full bg-black/60 backdrop-blur-md border-2 border-yellow-400/30"
             >
               <p className="text-white">
-                💀 <span style={{ fontWeight: '700' }}>center ur face</span>
+                💀 <span style={{ fontWeight: "700" }}>center ur face</span>
               </p>
             </motion.div>
 
@@ -176,7 +180,7 @@ export function CameraScreen({ onCapture, onBack }: CameraScreenProps) {
               whileTap={{ scale: 0.95 }}
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.4, type: 'spring', stiffness: 200 }}
+              transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
               onClick={handleCapture}
               className="relative"
             >
@@ -186,18 +190,19 @@ export function CameraScreen({ onCapture, onBack }: CameraScreenProps) {
                 transition={{ duration: 2, repeat: Infinity }}
                 className="absolute inset-0 w-24 h-24 rounded-full bg-yellow-400 blur-xl"
               />
-              
+
               {/* Button - Snapchat style */}
               <div className="relative w-24 h-24 rounded-full bg-yellow-400 border-4 border-black shadow-2xl flex items-center justify-center">
                 <div className="w-20 h-20 rounded-full bg-white" />
               </div>
             </motion.button>
-            
+
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-white/80" style={{ fontWeight: '700' }}
+              className="text-white/80"
+              style={{ fontWeight: "700" }}
             >
               TAP TO CAPTURE 📸
             </motion.p>
@@ -217,7 +222,8 @@ export function CameraScreen({ onCapture, onBack }: CameraScreenProps) {
               />
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="text-yellow-400 underline underline-offset-4 flex items-center gap-2" style={{ fontWeight: '600' }}
+                className="text-yellow-400 underline underline-offset-4 flex items-center gap-2"
+                style={{ fontWeight: "600" }}
               >
                 <Upload className="w-4 h-4" />
                 upload instead
@@ -262,12 +268,16 @@ export function CameraScreen({ onCapture, onBack }: CameraScreenProps) {
             className="mb-8 text-center max-w-sm"
           >
             <div className="w-32 h-32 mx-auto mb-6 rounded-3xl bg-yellow-400 flex items-center justify-center shadow-2xl rotate-6">
-              <Upload className="w-16 h-16 text-black -rotate-6" strokeWidth={2.5} />
+              <Upload
+                className="w-16 h-16 text-black -rotate-6"
+                strokeWidth={2.5}
+              />
             </div>
-            <h2 className="text-white mb-4">
-              just upload a pic instead 📷
-            </h2>
-            <p className="text-white/70 leading-relaxed mb-6" style={{ fontSize: '1.125rem' }}>
+            <h2 className="text-white mb-4">just upload a pic instead 📷</h2>
+            <p
+              className="text-white/70 leading-relaxed mb-6"
+              style={{ fontSize: "1.125rem" }}
+            >
               camera not working rn but we can still find ur name 🔥
             </p>
           </motion.div>
@@ -285,13 +295,21 @@ export function CameraScreen({ onCapture, onBack }: CameraScreenProps) {
             onClick={() => fileInputRef.current?.click()}
             className="w-full max-w-sm bg-yellow-400 text-black py-5 rounded-full shadow-2xl relative overflow-hidden"
           >
-            <span className="relative z-10 flex items-center justify-center gap-2" style={{ fontSize: '1.125rem', fontWeight: '800' }}>
+            <span
+              className="relative z-10 flex items-center justify-center gap-2"
+              style={{ fontSize: "1.125rem", fontWeight: "800" }}
+            >
               <Upload className="w-5 h-5" />
               CHOOSE PHOTO 🔥
             </span>
             <motion.div
-              animate={{ x: ['-100%', '200%'] }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'linear', repeatDelay: 1 }}
+              animate={{ x: ["-100%", "200%"] }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "linear",
+                repeatDelay: 1,
+              }}
               className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12"
             />
           </motion.button>
