@@ -8,7 +8,7 @@ import { WelcomeScreen } from "./components/WelcomeScreen";
 
 type Screen = "welcome" | "permission" | "camera" | "loading" | "result";
 
-export default function App() {
+function App() {
   const [currentScreen, setCurrentScreen] = useState<Screen>("welcome");
   const [capturedPhoto, setCapturedPhoto] = useState<string | null>(null);
   const [showShareSheet, setShowShareSheet] = useState(false);
@@ -98,3 +98,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;
