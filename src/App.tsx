@@ -12,6 +12,7 @@ function App() {
   const [currentScreen, setCurrentScreen] = useState<Screen>("welcome");
   const [capturedPhoto, setCapturedPhoto] = useState<string | null>(null);
   const [showShareSheet, setShowShareSheet] = useState(false);
+  const [gender, setGender] = useState<"F" | "M">("F");
   const [generatedName, setGeneratedName] = useState({
     korean: "서연",
     romanization: "Seo-yeon",
@@ -22,7 +23,9 @@ function App() {
       "matches popular modern korean names for creative souls",
     ],
   });
-  const handleStart = () => {
+
+  const handleGenderSelect = (selectedGender: "F" | "M") => {
+    setGender(selectedGender);
     setCurrentScreen("permission");
   };
 
@@ -61,7 +64,9 @@ function App() {
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
       {/* Mobile container */}
       <div className="max-w-md mx-auto min-h-screen bg-white relative">
-        {currentScreen === "welcome" && <WelcomeScreen onStart={handleStart} />}
+        {currentScreen === "welcome" && (
+          <WelcomeScreen onSelectGender={handleGenderSelect} />
+        )}
 
         {currentScreen === "permission" && (
           <CameraPermissionScreen
