@@ -1,5 +1,13 @@
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/variable/PretendardVariable.ttf') format('truetype-variations');
+}
+
 :root {
   --font-size: 16px;
   --background: #ffffff;
@@ -186,4 +194,5 @@
 
 html {
   font-size: var(--font-size);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }

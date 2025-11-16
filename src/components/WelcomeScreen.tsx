@@ -1,5 +1,5 @@
-import { motion } from "motion/react";
 import { Zap } from "lucide-react";
+import { motion } from "motion/react";
 
 interface WelcomeScreenProps {
   onStart: () => void;
@@ -132,8 +132,7 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
           className="text-white/70 max-w-xs mt-4 leading-relaxed"
           style={{ fontSize: "1.125rem" }}
         >
-          AI reads ur face & gives u a name that actually hits
-          different 🔥
+          AI reads ur face & gives u a name that actually hits different 🔥
         </p>
 
         {/* Stats/Social Proof */}
@@ -143,9 +142,7 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
           transition={{ delay: 0.6 }}
           className="mt-6 px-5 py-3 rounded-full bg-yellow-400/20 backdrop-blur-sm border border-yellow-400/30"
         >
-          <p className="text-yellow-400">
-            💀 2.3M+ already got theirs
-          </p>
+          <p className="text-yellow-400">💀 2.3M+ already got theirs</p>
         </motion.div>
       </motion.div>
 
