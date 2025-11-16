@@ -1,0 +1,3188 @@
+[
+  {
+    "ko": "가은",
+    "en": "Ga-eun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "가영",
+    "en": "Ga-yeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "가연",
+    "en": "Ga-yeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "가희",
+    "en": "Ga-hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "가민",
+    "en": "Ga-min",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "가람",
+    "en": "Ga-ram",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "강희",
+    "en": "Gang-hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "강민",
+    "en": "Gang-min",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "강지",
+    "en": "Gang-ji",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "건아",
+    "en": "Geon-a",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "경민",
+    "en": "Gyeong-min",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "경서",
+    "en": "Gyeong-seo",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "경진",
+    "en": "Gyeong-jin",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "경하",
+    "en": "Gyeong-ha",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "경희",
+    "en": "Gyeong-hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "고운",
+    "en": "Go-Woon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "고은",
+    "en": "Go-eun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "고영",
+    "en": "Go-yeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "고희",
+    "en": "Go-hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "규리",
+    "en": "Gyu-ri",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "규민",
+    "en": "Gyu-min",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "규빈",
+    "en": "Gyu-bin",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "규영",
+    "en": "Gyu-yeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "나경",
+    "en": "Na-gyeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "나연",
+    "en": "Na-yeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "나윤",
+    "en": "Na-yun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "나영",
+    "en": "Na-yeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "나현",
+    "en": "Na-hyeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "나희",
+    "en": "Na-hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "나린",
+    "en": "Na-rin",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "다은",
+    "en": "Da-eun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "다연",
+    "en": "Da-yeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "다영",
+    "en": "Da-yeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "다윤",
+    "en": "Da-yun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "다인",
+    "en": "Da-in",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "다혜",
+    "en": "Da-hye",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "다정",
+    "en": "Da-jeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "단비",
+    "en": "Dan-bi",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "단아",
+    "en": "Dan-a",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "도연",
+    "en": "Do-yeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "도영",
+    "en": "Do-yeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "도윤",
+    "en": "Do-yun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "라윤",
+    "en": "Ra-yun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "라연",
+    "en": "Ra-yeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "라영",
+    "en": "Ra-yeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "라희",
+    "en": "Ra-hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "라온",
+    "en": "Ra-on",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "란희",
+    "en": "Ran-hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "로아",
+    "en": "Ro-a",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "로연",
+    "en": "Ro-yeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "로윤",
+    "en": "Ro-yun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "로희",
+    "en": "Ro-hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "루나",
+    "en": "Ru-na",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "루다",
+    "en": "Ru-da",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "루민",
+    "en": "Ru-min",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "루희",
+    "en": "Ru-hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "리나",
+    "en": "Ri-na",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "리아",
+    "en": "Ri-a",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "리윤",
+    "en": "Ri-yun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "리연",
+    "en": "Ri-yeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "리현",
+    "en": "Ri-hyeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "리진",
+    "en": "Ri-jin",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "리안",
+    "en": "Ri-an",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "리채",
+    "en": "Ri-chae",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "리수",
+    "en": "Ri-su",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "마리",
+    "en": "Ma-ri",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "마현",
+    "en": "Ma-hyeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "미나",
+    "en": "Mi-na",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "미라",
+    "en": "Mi-ra",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "미란",
+    "en": "Mi-ran",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "미래",
+    "en": "Mi-rae",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "미리",
+    "en": "Mi-ri",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "미정",
+    "en": "Mi-jeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "미연",
+    "en": "Mi-yeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "미영",
+    "en": "Mi-yeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "미소",
+    "en": "Mi-so",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "민경",
+    "en": "Min-gyeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "민서",
+    "en": "Min-seo",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "민지",
+    "en": "Min-ji",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "민아",
+    "en": "Min-a",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "민영",
+    "en": "Min-yeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "민유",
+    "en": "Min-yu",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "민윤",
+    "en": "Min-yun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "민희",
+    "en": "Min-hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "민솔",
+    "en": "Min-sol",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "서아",
+    "en": "Seo-a",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "서연",
+    "en": "Seo-yeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "서영",
+    "en": "Seo-yeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "서윤",
+    "en": "Seo-yun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "서현",
+    "en": "Seo-hyeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "서희",
+    "en": "Seo-hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "선아",
+    "en": "Seon-a",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "선유",
+    "en": "Seon-yu",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "설아",
+    "en": "Seol-a",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "설희",
+    "en": "Seol-hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "소라",
+    "en": "So-ra",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "소연",
+    "en": "So-yeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "소영",
+    "en": "So-yeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "소윤",
+    "en": "So-yun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "소희",
+    "en": "So-hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "가온",
+    "en": "Ga-on",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "가람",
+    "en": "Ga-ram",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "가민",
+    "en": "Ga-min",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "강민",
+    "en": "Gang-min",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "강현",
+    "en": "Gang-hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "강우",
+    "en": "Gang-Woo",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "강윤",
+    "en": "Gang-yun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "강호",
+    "en": "Gang-ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "강진",
+    "en": "Gang-jin",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "강태",
+    "en": "Gang-tae",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "건우",
+    "en": "Geon-Woo",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "건호",
+    "en": "Geon-ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "건민",
+    "en": "Geon-min",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "건영",
+    "en": "Geon-yeong",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "건희",
+    "en": "Geon-hui",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "경민",
+    "en": "Gyeong-min",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "경준",
+    "en": "Gyeong-jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "경호",
+    "en": "Gyeong-ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "경진",
+    "en": "Gyeong-jin",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "경태",
+    "en": "Gyeong-tae",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "규민",
+    "en": "Gyu-min",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "규현",
+    "en": "Gyu-hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "규진",
+    "en": "Gyu-jin",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "규찬",
+    "en": "Gyu-chan",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "나윤",
+    "en": "Na-yun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "나현",
+    "en": "Na-hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "나준",
+    "en": "Na-jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "나진",
+    "en": "Na-jin",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "다온",
+    "en": "Da-on",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "다현",
+    "en": "Da-hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "다윤",
+    "en": "Da-yun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "다원",
+    "en": "Da-won",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "도윤",
+    "en": "Do-yun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "도현",
+    "en": "Do-hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "도진",
+    "en": "Do-Jin",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "도준",
+    "en": "Do-Jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "동현",
+    "en": "Dong-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "동우",
+    "en": "Dong-Woo",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "동윤",
+    "en": "Dong-Yun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "동진",
+    "en": "Dong-Jin",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "라온",
+    "en": "Ra-On",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "라준",
+    "en": "Ra-Jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "라현",
+    "en": "Ra-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "라윤",
+    "en": "Ra-Yun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "래온",
+    "en": "Rae-On",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "래준",
+    "en": "Rae-Jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "로건",
+    "en": "Ro-Geon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "로윤",
+    "en": "Ro-Yun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "로현",
+    "en": "Ro-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "로진",
+    "en": "Ro-Jin",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "루건",
+    "en": "Ru-Geon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "루민",
+    "en": "Ru-Min",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "류민",
+    "en": "Ryu-Min",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "류현",
+    "en": "Ryu-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "리온",
+    "en": "Ri-On",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "리현",
+    "en": "Ri-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "마로",
+    "en": "Ma-Ro",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "마현",
+    "en": "Ma-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "마준",
+    "en": "Ma-Jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "명호",
+    "en": "Myeong-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "명준",
+    "en": "Myeong-Jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민건",
+    "en": "Min-Geon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민규",
+    "en": "Min-Gyu",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민혁",
+    "en": "Min-Hyeok",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민준",
+    "en": "Min-Jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민재",
+    "en": "Min-Jae",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민현",
+    "en": "Min-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민호",
+    "en": "Min-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민석",
+    "en": "Min-Seok",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민태",
+    "en": "Min-Tae",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "범준",
+    "en": "Beom-Jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "서준",
+    "en": "Seo-Jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "서진",
+    "en": "Seo-Jin",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "서현",
+    "en": "Seo-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "서우",
+    "en": "Seo-Woo",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "선우",
+    "en": "Seon-Woo",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "세훈",
+    "en": "Se-Hun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "성민",
+    "en": "Seong-Min",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "성현",
+    "en": "Seong-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "성호",
+    "en": "Seong-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "수호",
+    "en": "Su-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "수현",
+    "en": "Su-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "시윤",
+    "en": "Si-Yun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "시현",
+    "en": "Si-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "시우",
+    "en": "Si-Woo",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "연우",
+    "en": "Yeon-Woo",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "연준",
+    "en": "Yeon-Jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "연호",
+    "en": "Yeon-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "예준",
+    "en": "Ye-Jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "예현",
+    "en": "Ye-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "우진",
+    "en": "Woo-Jin",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "우빈",
+    "en": "Woo-Bin",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "우현",
+    "en": "Woo-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "우성",
+    "en": "Woo-Seong",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "윤호",
+    "en": "Yun-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "윤현",
+    "en": "Yun-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "윤민",
+    "en": "Yun-Min",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "윤우",
+    "en": "Yun-Woo",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "재민",
+    "en": "Jae-Min",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "재현",
+    "en": "Jae-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "재준",
+    "en": "Jae-Jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "재호",
+    "en": "Jae-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "재윤",
+    "en": "Jae-Yun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "재혁",
+    "en": "Jae-Hyeok",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "준호",
+    "en": "Jun-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "준영",
+    "en": "Jun-Yeong",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "태민",
+    "en": "Tae-Min",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "태현",
+    "en": "Tae-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "태훈",
+    "en": "Tae-Hun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "현우",
+    "en": "Hyeon-Woo",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "가희",
+    "en": "Ga-Hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "가온",
+    "en": "Ga-On",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "강지",
+    "en": "Gang-Ji",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "강희",
+    "en": "Gang-Hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "건영",
+    "en": "Geon-Yeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "경아",
+    "en": "Gyeong-A",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "경화",
+    "en": "Gyeong-Hwa",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "고현",
+    "en": "Go-Hyeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "고정",
+    "en": "Go-Jeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "규리",
+    "en": "Gyu-Ri",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "규진",
+    "en": "Gyu-Jin",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "나희",
+    "en": "Na-Hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "나경",
+    "en": "Na-Gyeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "나령",
+    "en": "Na-Ryeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "다솜",
+    "en": "Da-Som",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "다혜",
+    "en": "Da-Hye",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "다빈",
+    "en": "Da-Bin",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "다경",
+    "en": "Da-Gyeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "다래",
+    "en": "Da-Rae",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "다윤",
+    "en": "Da-Yun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "단아",
+    "en": "Dan-A",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "단희",
+    "en": "Dan-Hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "단정",
+    "en": "Dan-Jeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "도경",
+    "en": "Do-Gyeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "도희",
+    "en": "Do-Hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "라라",
+    "en": "Ra-Ra",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "라미",
+    "en": "Ra-Mi",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "라진",
+    "en": "Ra-Jin",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "라윤",
+    "en": "Ra-Yun",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "란주",
+    "en": "Ran-Ju",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "로미",
+    "en": "Ro-Mi",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "로하",
+    "en": "Ro-Ha",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "로희",
+    "en": "Ro-Hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "루희",
+    "en": "Ru-Hui",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "루혜",
+    "en": "Ru-Hye",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "리하",
+    "en": "Ri-Ha",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "리현",
+    "en": "Ri-Hyeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "리화",
+    "en": "Ri-Hwa",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "마린",
+    "en": "Ma-Rin",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "마연",
+    "en": "Ma-Yeon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "미경",
+    "en": "Mi-Gyeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "미숙",
+    "en": "Mi-Suk",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "미향",
+    "en": "Mi-Hyang",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "미화",
+    "en": "Mi-Hwa",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "민정",
+    "en": "Min-Jeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "민선",
+    "en": "Min-Seon",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "민서",
+    "en": "Min-Seo",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "민주",
+    "en": "Min-Ju",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "서정",
+    "en": "Seo-Jeong",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "서린",
+    "en": "Seo-Rin",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "서율",
+    "en": "Seo-Yul",
+    "gender": "F",
+    "grade": "common"
+  },
+  {
+    "ko": "강태",
+    "en": "Gang-Tae",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "강혁",
+    "en": "Gang-Hyeok",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "건하",
+    "en": "Geon-Ha",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "건휘",
+    "en": "Geon-Hwi",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "경택",
+    "en": "Gyeong-Taek",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "경환",
+    "en": "Gyeong-Hwan",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "규택",
+    "en": "Gyu-Taek",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "규원",
+    "en": "Gyu-Won",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "나훈",
+    "en": "Na-Hun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "다현",
+    "en": "Da-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "도휘",
+    "en": "Do-Hwi",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "동욱",
+    "en": "Dong-Wook",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "동하",
+    "en": "Dong-Ha",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "동휘",
+    "en": "Dong-Hwi",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "라운",
+    "en": "Ra-Woon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "래훈",
+    "en": "Rae-Hun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "로빈",
+    "en": "Ro-Bin",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "루한",
+    "en": "Ru-Han",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "류성",
+    "en": "Ryu-Seong",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "리현",
+    "en": "Ri-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "마루",
+    "en": "Ma-Ru",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "명호",
+    "en": "Myeong-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "명혁",
+    "en": "Myeong-Hyeok",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민욱",
+    "en": "Min-Wook",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민호",
+    "en": "Min-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민석",
+    "en": "Min-Seok",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민환",
+    "en": "Min-Hwan",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민철",
+    "en": "Min-Cheol",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민수",
+    "en": "Min-Su",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "민태",
+    "en": "Min-Tae",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "서호",
+    "en": "Seo-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "서권",
+    "en": "Seo-Gweon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "서범",
+    "en": "Seo-Beom",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "선우",
+    "en": "Seon-Woo",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "세훈",
+    "en": "Se-Hun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "성민",
+    "en": "Seong-Min",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "성호",
+    "en": "Seong-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "성현",
+    "en": "Seong-Hyeon",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "수호",
+    "en": "Su-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "수환",
+    "en": "Su-Hwan",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "시우",
+    "en": "Si-Woo",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "시환",
+    "en": "Si-Hwan",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "아준",
+    "en": "A-Jun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "여훈",
+    "en": "Yeo-Hun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "연호",
+    "en": "Yeon-Ho",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "예훈",
+    "en": "Ye-Hun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "우성",
+    "en": "U-Seong",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "재훈",
+    "en": "Jae-Hun",
+    "gender": "M",
+    "grade": "common"
+  },
+  {
+    "ko": "보영",
+    "en": "Bo-yeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "지민",
+    "en": "Ji-min",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "수지",
+    "en": "Su-ji",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "은지",
+    "en": "Eun-ji",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "태연",
+    "en": "Tae-yeon",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "슬기",
+    "en": "Seul-gi",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "유나",
+    "en": "Yu-na",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "윤아",
+    "en": "Yoon-a",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "서현",
+    "en": "Seo-hyeon",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "휘인",
+    "en": "Hwi-in",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "문별",
+    "en": "Moon-byeol",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "은하",
+    "en": "Eun-ha",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "엄지",
+    "en": "Eom-ji",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "윤하",
+    "en": "Yoon-ha",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "지영",
+    "en": "Ji-yeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "민지",
+    "en": "Min-ji",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "해린",
+    "en": "Hae-rin",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "혜인",
+    "en": "Hye-in",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "혜교",
+    "en": "Hye-gyo",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "지현",
+    "en": "Ji-hyeon",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "예진",
+    "en": "Ye-jin",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "태리",
+    "en": "Tae-ri",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "지원",
+    "en": "Ji-won",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "고은",
+    "en": "Go-eun",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "은빈",
+    "en": "Eun-bin",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "유정",
+    "en": "Yu-jeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "세정",
+    "en": "Se-jeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "아라",
+    "en": "A-ra",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "신혜",
+    "en": "Shin-hye",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "효주",
+    "en": "Hyo-joo",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "예지",
+    "en": "Ye-ji",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "소민",
+    "en": "So-min",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "민영",
+    "en": "Min-yeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "민아",
+    "en": "Min-a",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "진서",
+    "en": "Jin-seo",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "소현",
+    "en": "So-hyeon",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "연서",
+    "en": "Yeon-seo",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "준희",
+    "en": "Jun-hui",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "나영",
+    "en": "Na-yeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "하늘",
+    "en": "Ha-neul",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "가인",
+    "en": "Ga-in",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "은우",
+    "en": "Eun-Woo",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "서준",
+    "en": "Seo-jun",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "보검",
+    "en": "Bo-geom",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "해인",
+    "en": "Hae-in",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "강",
+    "en": "Kang",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "준열",
+    "en": "Joon-yeol",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "연석",
+    "en": "Yeon-seok",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "종석",
+    "en": "Jong-seok",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "수현",
+    "en": "Su-hyeon",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "빈",
+    "en": "Bin",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "동원",
+    "en": "Dong-won",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "인성",
+    "en": "In-seong",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "우성",
+    "en": "U-seong",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "민호",
+    "en": "Min-ho",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "형식",
+    "en": "Hyeong-sik",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "경수",
+    "en": "Kyeong-su",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "백현",
+    "en": "Baek-hyeon",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "찬열",
+    "en": "Chan-yeol",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "대성",
+    "en": "Dae-seong",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "정국",
+    "en": "Jung-guk",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "진",
+    "en": "Jin",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "민호",
+    "en": "Min-ho",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "종현",
+    "en": "Jong-hyeon",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "태민",
+    "en": "Tae-min",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "승원",
+    "en": "Seung-won",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "지훈",
+    "en": "Ji-hoon",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "범수",
+    "en": "Beom-su",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "승기",
+    "en": "Seung-gi",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "영웅",
+    "en": "Yeong-ung",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "세형",
+    "en": "Se-hyeong",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "동엽",
+    "en": "Dong-yeop",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "재석",
+    "en": "Jae-seok",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "호동",
+    "en": "Ho-dong",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "경규",
+    "en": "Kyeong-gyu",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "승만",
+    "en": "Seung-man",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "보선",
+    "en": "Bo-seon",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "정희",
+    "en": "Jung-hui",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "규하",
+    "en": "Gyu-ha",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "두환",
+    "en": "Du-hwan",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "태우",
+    "en": "Tae-u",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "영삼",
+    "en": "Yeong-sam",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "대중",
+    "en": "Dae-jung",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "무현",
+    "en": "Mu-hyeon",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "명박",
+    "en": "Myeong-bak",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "근혜",
+    "en": "Geun-hye",
+    "gender": "F",
+    "grade": "rare"
+  },
+  {
+    "ko": "재인",
+    "en": "Jae-in",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "석열",
+    "en": "Seok-yeol",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "재명",
+    "en": "Jae-myeong",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "일성",
+    "en": "Il-seong",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "정일",
+    "en": "Jong-il",
+    "gender": "M",
+    "grade": "rare"
+  },
+  {
+    "ko": "정은",
+    "en": "Jong-un",
+    "gender": "F",
+    "grade": "rare"
+  },
+  {
+    "ko": "원영",
+    "en": "Won-yeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "지민",
+    "en": "Ji-min",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "정국",
+    "en": "Jung-guk",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "태형",
+    "en": "Tae-hyeong",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "윤기",
+    "en": "Yun-gi",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "석진",
+    "en": "Seok-jin",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "호석",
+    "en": "Ho-seok",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "민지",
+    "en": "Min-ji",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "해린",
+    "en": "Hae-rin",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "혜인",
+    "en": "Hye-in",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "지우",
+    "en": "Ji-u",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "민호",
+    "en": "Min-ho",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "종현",
+    "en": "Jong-hyeon",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "태민",
+    "en": "Tae-min",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "영웅",
+    "en": "Yeong-ung",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "보검",
+    "en": "Bo-geom",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "서준",
+    "en": "Seo-jun",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "해인",
+    "en": "Hae-in",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "지현",
+    "en": "Ji-hyeon",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "예진",
+    "en": "Ye-jin",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "수현",
+    "en": "Su-hyeon",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "세정",
+    "en": "Se-jeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "유정",
+    "en": "Yu-jeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "보영",
+    "en": "Bo-yeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "수지",
+    "en": "Su-ji",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "예지",
+    "en": "Ye-ji",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "나연",
+    "en": "Na-yeon",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "유나",
+    "en": "Yu-na",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "슬기",
+    "en": "Seul-gi",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "태연",
+    "en": "Tae-yeon",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "소희",
+    "en": "So-hui",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "민아",
+    "en": "Min-a",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "혜리",
+    "en": "Hye-ri",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "지성",
+    "en": "Ji-seong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "하늘",
+    "en": "Ha-neul",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "하영",
+    "en": "Ha-yeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "소영",
+    "en": "So-yeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "세영",
+    "en": "Se-yeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "지원",
+    "en": "Ji-won",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "지환",
+    "en": "Ji-hwan",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "준호",
+    "en": "Jun-ho",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "영재",
+    "en": "Yeong-jae",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "도윤",
+    "en": "Do-yun",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "하준",
+    "en": "Ha-jun",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "시우",
+    "en": "Si-u",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "예준",
+    "en": "Ye-jun",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "서연",
+    "en": "Seo-yeon",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "서은",
+    "en": "Seo-eun",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "하린",
+    "en": "Ha-rin",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "서윤",
+    "en": "Seo-yun",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "유진",
+    "en": "Yu-jin",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "지수",
+    "en": "Ji-su",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "제니",
+    "en": "Je-ni",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "로제",
+    "en": "Ro-je",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "채영",
+    "en": "Chae-yeong",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "은비",
+    "en": "Eun-bi",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "유리",
+    "en": "Yu-ri",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "소연",
+    "en": "So-yeon",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "민혁",
+    "en": "Min-hyeok",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "우빈",
+    "en": "U-bin",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "강우",
+    "en": "Gang-u",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "도현",
+    "en": "Do-hyeon",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "준영",
+    "en": "Jun-yeong",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "수빈",
+    "en": "Su-bin",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "태현",
+    "en": "Tae-hyeon",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "승민",
+    "en": "Seung-min",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "현진",
+    "en": "Hyeon-jin",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "영빈",
+    "en": "Yeong-bin",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "민규",
+    "en": "Min-gyu",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "찬열",
+    "en": "Chan-yeol",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "백현",
+    "en": "Baek-hyeon",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "대성",
+    "en": "Dae-seong",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "경수",
+    "en": "Gyeong-su",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "도영",
+    "en": "Do-yeong",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "지용",
+    "en": "Ji-yong",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "민재",
+    "en": "Min-jae",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "시원",
+    "en": "Si-won",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "동해",
+    "en": "Dong-hae",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "은혁",
+    "en": "Eun-hyeok",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "소원",
+    "en": "So-won",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "다현",
+    "en": "Da-hyeon",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "채원",
+    "en": "Chae-won",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "채희",
+    "en": "Chae-hui",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "세빈",
+    "en": "Se-bin",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "다빈",
+    "en": "Da-bin",
+    "gender": "F",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "윤호",
+    "en": "Yun-ho",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "승우",
+    "en": "Seung-u",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "성훈",
+    "en": "Seong-hun",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "종호",
+    "en": "Jong-ho",
+    "gender": "M",
+    "grade": "uncommon"
+  },
+  {
+    "ko": "순자",
+    "en": "Sun-ja",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "말자",
+    "en": "Mal-ja",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "복자",
+    "en": "Bok-ja",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "영자",
+    "en": "Yeong-ja",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "정자",
+    "en": "Jeong-ja",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "순이",
+    "en": "Sun-i",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "말순",
+    "en": "Mal-sun",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "복순",
+    "en": "Bok-sun",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "금순",
+    "en": "Geum-sun",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "춘자",
+    "en": "Chun-ja",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "춘식",
+    "en": "Chun-sik",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "만식",
+    "en": "Man-sik",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "영식",
+    "en": "Yeong-sik",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "철수",
+    "en": "Cheol-su",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "영호",
+    "en": "Yeong-ho",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "병호",
+    "en": "Byeong-ho",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "병철",
+    "en": "Byeong-cheol",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "상철",
+    "en": "Sang-cheol",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "춘호",
+    "en": "Chun-ho",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "춘섭",
+    "en": "Chun-seop",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "길자",
+    "en": "Gil-ja",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "길순",
+    "en": "Gil-sun",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "옥순",
+    "en": "Ok-sun",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "옥희",
+    "en": "Ok-hui",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "분희",
+    "en": "Bun-hui",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "점례",
+    "en": "Jeom-rye",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "점순",
+    "en": "Jeom-sun",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "말례",
+    "en": "Mal-rye",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "말숙",
+    "en": "Mal-suk",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "정숙",
+    "en": "Jeong-suk",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "명자",
+    "en": "Myeong-ja",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "명희",
+    "en": "Myeong-hui",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "종남",
+    "en": "Jong-nam",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "학수",
+    "en": "Hak-su",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "만수",
+    "en": "Man-su",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "오복",
+    "en": "O-bok",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "삼돌",
+    "en": "Sam-dol",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "칠복",
+    "en": "Chil-bok",
+    "gender": "M",
+    "grade": "unique"
+  },
+  {
+    "ko": "복만",
+    "en": "Bok-man",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "갑돌",
+    "en": "Gap-dol",
+    "gender": "F",
+    "grade": "unique"
+  },
+  {
+    "ko": "갑순",
+    "en": "Gap-sun",
+    "gender": "F",
+    "grade": "unique"
+  }
+]
