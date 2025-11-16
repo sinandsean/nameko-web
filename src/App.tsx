@@ -5,6 +5,7 @@ import { LoadingScreen } from "./components/LoadingScreen";
 import { ResultScreen } from "./components/ResultScreen";
 import { ShareSheet } from "./components/ShareSheet";
 import { WelcomeScreen } from "./components/WelcomeScreen";
+import { getRandomNameByGrade } from "./utils/prob";
 
 type Screen = "welcome" | "permission" | "camera" | "loading" | "result";
 
@@ -43,6 +44,35 @@ function App() {
 
     // Simulate 3 second analysis
     setTimeout(() => {
+      // Generate random name based on gender
+      const randomName = getRandomNameByGrade(gender);
+
+      // Generate interpretation based on gender
+      const interpretation =
+        gender === "F"
+          ? "elegant, artistic, and graceful energy"
+          : "sharp, confident, and charismatic presence";
+
+      const reasons =
+        gender === "F"
+          ? [
+              "soft facial features that radiate warmth",
+              "gentle yet confident vibe",
+              "matches popular modern korean names for creative souls",
+            ]
+          : [
+              "strong facial structure with natural leadership energy",
+              "determined yet approachable vibe",
+              "matches popular modern korean names for ambitious individuals",
+            ];
+
+      setGeneratedName({
+        korean: randomName.ko,
+        romanization: randomName.en,
+        interpretation,
+        reasons,
+      });
+
       setCurrentScreen("result");
     }, 3000);
   };
