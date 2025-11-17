@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { CameraPermissionScreen } from "./components/CameraPermissionScreen";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { ResultScreen } from "./components/ResultScreen";
@@ -9,6 +9,7 @@ import { getRandomNameByGrade } from "./utils/prob";
 
 function App() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [capturedPhoto, setCapturedPhoto] = useState<string | null>(null);
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [gender, setGender] = useState<"F" | "M">("F");
@@ -101,9 +102,41 @@ function App() {
     setShowShareSheet(true);
   };
 
-  const handleBackToHome = () => {
+  const handleBackFromResult = () => {
     navigate(-1);
   };
+
+  // Prevent forward navigation - only allow backward navigation
+  const historyIndexRef = useRef(0);
+
+  useEffect(() => {
+    // Track history position
+    const currentPath = location.pathname;
+    const pathOrder = ['/', '/permission', '/loading', '/result'];
+    const currentIndex = pathOrder.indexOf(currentPath);
+
+    if (currentIndex !== -1 && currentIndex > historyIndexRef.current) {
+      historyIndexRef.current = currentIndex;
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      const currentPath = location.pathname;
+      const pathOrder = ['/', '/permission', '/loading', '/result'];
+      const currentIndex = pathOrder.indexOf(currentPath);
+
+      // If trying to go forward (index increases), prevent it
+      if (currentIndex > historyIndexRef.current) {
+        window.history.back();
+      } else {
+        historyIndexRef.current = currentIndex;
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [location.pathname]);
 
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
@@ -127,7 +160,7 @@ function App() {
                 generatedName={generatedName}
                 onTryAgain={handleTryAgain}
                 onShare={handleShare}
-                onBack={handleBackToHome}
+                onBack={handleBackFromResult}
               />
             ) : null
           } />
