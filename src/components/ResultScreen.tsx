@@ -210,35 +210,6 @@ export function ResultScreen({
           </p>
         </motion.div>
 
-        {/* Tags */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="flex flex-wrap justify-center gap-2 mb-8 px-4"
-        >
-          {[
-            { icon: "🔥", text: "ur vibe" },
-            { icon: "💀", text: "no cap" },
-            { icon: "👑", text: "perfect match" },
-          ].map((tag, i) => (
-            <motion.div
-              key={i}
-              initial={{ scale: 0, rotate: -90 }}
-              animate={{ scale: 1, rotate: 0 }}
-              transition={{
-                delay: 0.8 + i * 0.1,
-                type: "spring",
-                stiffness: 200,
-              }}
-              className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white flex items-center gap-2"
-            >
-              <span className="text-lg">{tag.icon}</span>
-              <span style={{ fontWeight: "700" }}>{tag.text}</span>
-            </motion.div>
-          ))}
-        </motion.div>
-
         {/* Interpretation */}
         <motion.div
           initial={{ y: 30, opacity: 0 }}
