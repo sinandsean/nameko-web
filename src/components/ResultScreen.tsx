@@ -1,4 +1,4 @@
-import { Flame, RefreshCw, Share2, Zap } from "lucide-react";
+import { Flame, RefreshCw, Share2, Volume2, Zap } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 
@@ -21,6 +21,28 @@ export function ResultScreen({
   onShare,
 }: ResultScreenProps) {
   const [showConfetti, setShowConfetti] = useState(true);
+  const [isPlayingKorean, setIsPlayingKorean] = useState(false);
+  const [isPlayingEnglish, setIsPlayingEnglish] = useState(false);
+
+  const playKoreanPronunciation = () => {
+    setIsPlayingKorean(true);
+    const utterance = new SpeechSynthesisUtterance(generatedName.korean);
+    utterance.lang = "ko-KR";
+    utterance.rate = 0.8;
+    utterance.pitch = 1.0;
+    utterance.onend = () => setIsPlayingKorean(false);
+    speechSynthesis.speak(utterance);
+  };
+
+  const playEnglishPronunciation = () => {
+    setIsPlayingEnglish(true);
+    const utterance = new SpeechSynthesisUtterance(generatedName.romanization);
+    utterance.lang = "en-US";
+    utterance.rate = 0.7;
+    utterance.pitch = 1.0;
+    utterance.onend = () => setIsPlayingEnglish(false);
+    speechSynthesis.speak(utterance);
+  };
 
   return (
     <motion.div
@@ -138,34 +160,69 @@ export function ResultScreen({
           }}
           className="text-center mb-6"
         >
-          <motion.div
-            animate={{
-              textShadow: [
-                "0 0 30px rgba(250, 204, 21, 0.5)",
-                "0 0 50px rgba(250, 204, 21, 0.8)",
-                "0 0 30px rgba(250, 204, 21, 0.5)",
-              ],
-            }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <h1
-              className="text-yellow-400 mb-3"
-              style={{
-                fontSize: "4.5rem",
-                lineHeight: "0.9",
-                fontWeight: "900",
-                letterSpacing: "-0.03em",
+          <div className="flex items-center justify-center gap-4 mb-3">
+            <motion.div
+              animate={{
+                textShadow: [
+                  "0 0 30px rgba(250, 204, 21, 0.5)",
+                  "0 0 50px rgba(250, 204, 21, 0.8)",
+                  "0 0 30px rgba(250, 204, 21, 0.5)",
+                ],
               }}
+              transition={{ duration: 2, repeat: Infinity }}
             >
-              {generatedName.korean}
-            </h1>
-          </motion.div>
-          <p
-            className="text-white/80 mb-4"
-            style={{ fontSize: "1.75rem", fontWeight: "700" }}
-          >
-            {generatedName.romanization}
-          </p>
+              <h1
+                className="text-yellow-400"
+                style={{
+                  fontSize: "4.5rem",
+                  lineHeight: "0.9",
+                  fontWeight: "900",
+                  letterSpacing: "-0.03em",
+                }}
+              >
+                {generatedName.korean}
+              </h1>
+            </motion.div>
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={playKoreanPronunciation}
+              className={`w-14 h-14 rounded-full flex items-center justify-center transition-all ${
+                isPlayingKorean
+                  ? "bg-yellow-400 text-black"
+                  : "bg-white/10 text-yellow-400 hover:bg-white/20"
+              }`}
+              disabled={isPlayingKorean}
+            >
+              <Volume2
+                className={`w-6 h-6 ${isPlayingKorean ? "animate-pulse" : ""}`}
+                strokeWidth={2.5}
+              />
+            </motion.button>
+          </div>
+
+          <div className="flex items-center justify-center gap-3">
+            <p
+              className="text-white/80"
+              style={{ fontSize: "1.75rem", fontWeight: "700" }}
+            >
+              {generatedName.romanization}
+            </p>
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={playEnglishPronunciation}
+              className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
+                isPlayingEnglish
+                  ? "bg-yellow-400 text-black"
+                  : "bg-white/10 text-white/60 hover:bg-white/20"
+              }`}
+              disabled={isPlayingEnglish}
+            >
+              <Volume2
+                className={`w-5 h-5 ${isPlayingEnglish ? "animate-pulse" : ""}`}
+                strokeWidth={2.5}
+              />
+            </motion.button>
+          </div>
         </motion.div>
 
         {/* Tags */}
