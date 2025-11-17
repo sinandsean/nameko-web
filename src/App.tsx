@@ -107,36 +107,24 @@ function App() {
   };
 
   // Prevent forward navigation - only allow backward navigation
-  const historyIndexRef = useRef(0);
+  const maxReachedIndexRef = useRef(0);
 
   useEffect(() => {
-    // Track history position
-    const currentPath = location.pathname;
     const pathOrder = ['/', '/permission', '/loading', '/result'];
-    const currentIndex = pathOrder.indexOf(currentPath);
+    const currentIndex = pathOrder.indexOf(location.pathname);
 
-    if (currentIndex !== -1 && currentIndex > historyIndexRef.current) {
-      historyIndexRef.current = currentIndex;
+    if (currentIndex === -1) return;
+
+    // If current index is greater than max reached, user navigated forward
+    // This means they're trying to access a page they already left
+    if (currentIndex > maxReachedIndexRef.current) {
+      // Block forward navigation by replacing with home
+      navigate('/', { replace: true });
+    } else {
+      // Update max reached index when moving backward
+      maxReachedIndexRef.current = currentIndex;
     }
-  }, [location.pathname]);
-
-  useEffect(() => {
-    const handlePopState = () => {
-      const currentPath = location.pathname;
-      const pathOrder = ['/', '/permission', '/loading', '/result'];
-      const currentIndex = pathOrder.indexOf(currentPath);
-
-      // If trying to go forward (index increases), prevent it
-      if (currentIndex > historyIndexRef.current) {
-        window.history.back();
-      } else {
-        historyIndexRef.current = currentIndex;
-      }
-    };
-
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, [location.pathname]);
+  }, [location.pathname, navigate]);
 
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
