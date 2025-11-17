@@ -25,6 +25,7 @@ function App() {
   });
 
   const handleStart = () => {
+    isNavigatingRef.current = true;
     navigate("/permission");
   };
 
@@ -50,11 +51,13 @@ function App() {
   };
 
   const handleNotNow = () => {
-    navigate("/");
+    isNavigatingRef.current = true;
+    navigate("/", { state: { fromForward: false } });
   };
 
   const handleCapture = (photoData: string) => {
     setCapturedPhoto(photoData);
+    isNavigatingRef.current = true;
     navigate("/loading");
 
     // Simulate 3 second analysis
@@ -89,13 +92,15 @@ function App() {
       });
 
       // Replace loading screen in history so back button goes to permission screen
+      isNavigatingRef.current = true;
       navigate("/result", { replace: true });
     }, 3000);
   };
 
   const handleTryAgain = () => {
     setCapturedPhoto(null);
-    navigate("/");
+    isNavigatingRef.current = true;
+    navigate("/", { state: { fromForward: false } });
   };
 
   const handleShare = () => {
@@ -103,11 +108,13 @@ function App() {
   };
 
   const handleBackFromResult = () => {
-    navigate(-1);
+    isNavigatingRef.current = true;
+    navigate('/permission', { state: { fromForward: false } });
   };
 
-  // Prevent forward navigation - only allow backward navigation
+  // Track the maximum index reached to prevent browser forward navigation
   const maxReachedIndexRef = useRef(0);
+  const isNavigatingRef = useRef(false);
 
   useEffect(() => {
     const pathOrder = ['/', '/permission', '/loading', '/result'];
@@ -115,13 +122,19 @@ function App() {
 
     if (currentIndex === -1) return;
 
-    // If current index is greater than max reached, user navigated forward
-    // This means they're trying to access a page they already left
+    // Skip blocking if this is a programmatic navigation (from our app)
+    if (isNavigatingRef.current) {
+      isNavigatingRef.current = false;
+      maxReachedIndexRef.current = Math.max(maxReachedIndexRef.current, currentIndex);
+      return;
+    }
+
+    // Block only browser forward navigation (trying to go beyond max reached)
     if (currentIndex > maxReachedIndexRef.current) {
-      // Block forward navigation by replacing with home
+      // This is browser forward button - block it
       navigate('/', { replace: true });
     } else {
-      // Update max reached index when moving backward
+      // This is browser back button - allow it
       maxReachedIndexRef.current = currentIndex;
     }
   }, [location.pathname, navigate]);

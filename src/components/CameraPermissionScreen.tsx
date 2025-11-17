@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Camera, Zap } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 interface CameraPermissionScreenProps {
   onAllow: (gender: "F" | "M") => void;
@@ -9,15 +10,14 @@ interface CameraPermissionScreenProps {
 
 export function CameraPermissionScreen({ onAllow, onNotNow }: CameraPermissionScreenProps) {
   const [selectedGender, setSelectedGender] = useState<"F" | "M" | null>(null);
-  const isFirstRender = useRef(true);
+  const location = useLocation();
 
-  useEffect(() => {
-    isFirstRender.current = false;
-  }, []);
+  // Check if this is a navigation back (from history state)
+  const isNavigatingBack = location.state?.fromForward === false;
 
   return (
     <motion.div
-      initial={isFirstRender.current ? { opacity: 0, x: 100 } : { opacity: 1, x: 0 }}
+      initial={isNavigatingBack ? false : { opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 0.3, ease: 'easeOut' }}
@@ -48,9 +48,9 @@ export function CameraPermissionScreen({ onAllow, onNotNow }: CameraPermissionSc
 
       {/* Camera Icon */}
       <motion.div
-        initial={isFirstRender.current ? { scale: 0.8, opacity: 0 } : { scale: 1, opacity: 1 }}
+        initial={isNavigatingBack ? false : { scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: isFirstRender.current ? 0.2 : 0, duration: 0.5, type: 'spring', stiffness: 200 }}
+        transition={{ delay: isNavigatingBack ? 0 : 0.2, duration: 0.5, type: 'spring', stiffness: 200 }}
         className="mb-12 relative"
       >
         <div className="w-32 h-32 rounded-3xl bg-yellow-400 flex items-center justify-center shadow-2xl border-4 border-white/20 rotate-6">
@@ -83,9 +83,9 @@ export function CameraPermissionScreen({ onAllow, onNotNow }: CameraPermissionSc
 
       {/* Content */}
       <motion.div
-        initial={isFirstRender.current ? { y: 20, opacity: 0 } : { y: 0, opacity: 1 }}
+        initial={isNavigatingBack ? false : { y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: isFirstRender.current ? 0.4 : 0, duration: 0.5 }}
+        transition={{ delay: isNavigatingBack ? 0 : 0.4, duration: 0.5 }}
         className="text-center mb-8 max-w-sm"
       >
         <h2 className="text-white mb-4">
@@ -96,9 +96,9 @@ export function CameraPermissionScreen({ onAllow, onNotNow }: CameraPermissionSc
         </p>
 
         <motion.div
-          initial={isFirstRender.current ? { opacity: 0 } : { opacity: 1 }}
+          initial={isNavigatingBack ? false : { opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: isFirstRender.current ? 0.6 : 0 }}
+          transition={{ delay: isNavigatingBack ? 0 : 0.6 }}
           className="mt-6 px-4 py-3 rounded-full bg-yellow-400/20 backdrop-blur-sm border border-yellow-400/30 inline-block"
         >
           <p className="text-yellow-400">
@@ -109,9 +109,9 @@ export function CameraPermissionScreen({ onAllow, onNotNow }: CameraPermissionSc
 
       {/* Gender Selection */}
       <motion.div
-        initial={isFirstRender.current ? { y: 20, opacity: 0 } : { y: 0, opacity: 1 }}
+        initial={isNavigatingBack ? false : { y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: isFirstRender.current ? 0.5 : 0, duration: 0.5 }}
+        transition={{ delay: isNavigatingBack ? 0 : 0.5, duration: 0.5 }}
         className="w-full mb-8"
       >
         <p className="text-white/70 text-center mb-4" style={{ fontSize: '0.875rem' }}>
@@ -147,9 +147,9 @@ export function CameraPermissionScreen({ onAllow, onNotNow }: CameraPermissionSc
 
       {/* Buttons */}
       <motion.div
-        initial={isFirstRender.current ? { y: 20, opacity: 0 } : { y: 0, opacity: 1 }}
+        initial={isNavigatingBack ? false : { y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: isFirstRender.current ? 0.6 : 0, duration: 0.5 }}
+        transition={{ delay: isNavigatingBack ? 0 : 0.6, duration: 0.5 }}
         className="w-full flex flex-col gap-3"
       >
         <motion.button
