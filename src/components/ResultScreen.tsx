@@ -24,6 +24,19 @@ export function ResultScreen({
   const [isPlayingKorean, setIsPlayingKorean] = useState(false);
   const [isPlayingEnglish, setIsPlayingEnglish] = useState(false);
 
+  // Pre-generate confetti data to avoid Math.random() during render
+  const [confettiData] = useState(() => {
+    const emojis = ["🔥", "⚡", "💀", "👑", "💯"];
+    return [...Array(25)].map((_, i) => ({
+      id: i,
+      x: Math.random() * 400 - 200,
+      rotateDuration: 2.5 + Math.random() * 1.5,
+      delay: Math.random() * 0.3,
+      rotateDirection: Math.random() > 0.5 ? 1 : -1,
+      emoji: emojis[Math.floor(Math.random() * 5)],
+    }));
+  });
+
   const playKoreanPronunciation = () => {
     setIsPlayingKorean(true);
     const utterance = new SpeechSynthesisUtterance(generatedName.korean);
@@ -55,31 +68,31 @@ export function ResultScreen({
       {/* Confetti Effect - edgier emojis */}
       {showConfetti && (
         <>
-          {[...Array(25)].map((_, i) => (
+          {confettiData.map((confetti) => (
             <motion.div
-              key={i}
+              key={confetti.id}
               initial={{
-                x: Math.random() * 400 - 200,
+                x: confetti.x,
                 y: -20,
                 opacity: 1,
                 rotate: 0,
               }}
               animate={{
                 y: window.innerHeight + 50,
-                rotate: 360 * (Math.random() > 0.5 ? 1 : -1),
+                rotate: 360 * confetti.rotateDirection,
                 opacity: 0,
               }}
               transition={{
-                duration: 2.5 + Math.random() * 1.5,
-                delay: Math.random() * 0.3,
+                duration: confetti.rotateDuration,
+                delay: confetti.delay,
                 ease: "easeIn",
               }}
               onAnimationComplete={() => {
-                if (i === 24) setShowConfetti(false);
+                if (confetti.id === 24) setShowConfetti(false);
               }}
               className="absolute left-1/2 pointer-events-none text-3xl"
             >
-              {["🔥", "⚡", "💀", "👑", "💯"][Math.floor(Math.random() * 5)]}
+              {confetti.emoji}
             </motion.div>
           ))}
         </>
