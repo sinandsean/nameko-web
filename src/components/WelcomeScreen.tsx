@@ -1,18 +1,14 @@
 import { Zap } from "lucide-react";
 import { motion } from "motion/react";
-import { useLocation } from "react-router-dom";
 
 interface WelcomeScreenProps {
   onStart: () => void;
 }
 
 export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
-  const location = useLocation();
-  const isNavigatingBack = location.state?.fromForward === false;
-
   return (
     <motion.div
-      initial={isNavigatingBack ? false : { opacity: 0 }}
+      initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
@@ -81,10 +77,10 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
 
       {/* Logo with yellow accent */}
       <motion.div
-        initial={isNavigatingBack ? false : { scale: 0.5, opacity: 0 }}
+        initial={{ scale: 0.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{
-          delay: isNavigatingBack ? 0 : 0.2,
+          delay: 0.2,
           duration: 0.6,
           type: "spring",
           stiffness: 200,
@@ -106,9 +102,9 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
 
       {/* Main Content */}
       <motion.div
-        initial={isNavigatingBack ? false : { y: 20, opacity: 0 }}
+        initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: isNavigatingBack ? 0 : 0.4, duration: 0.5 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
         className="flex-1 flex flex-col items-center justify-center text-center px-4"
       >
         <motion.div
@@ -141,9 +137,9 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
 
         {/* Stats/Social Proof */}
         <motion.div
-          initial={isNavigatingBack ? false : { opacity: 0 }}
+          initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: isNavigatingBack ? 0 : 0.6 }}
+          transition={{ delay: 0.6 }}
           className="mt-6 px-5 py-3 rounded-full bg-yellow-400/20 backdrop-blur-sm border border-yellow-400/30"
         >
           <p className="text-yellow-400">💀 2.3M+ already got theirs</p>
@@ -152,9 +148,9 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
 
       {/* Bottom Actions */}
       <motion.div
-        initial={isNavigatingBack ? false : { y: 20, opacity: 0 }}
+        initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: isNavigatingBack ? 0 : 0.6, duration: 0.5 }}
+        transition={{ delay: 0.6, duration: 0.5 }}
         className="w-full flex flex-col items-center gap-4 mb-8"
       >
         <motion.button

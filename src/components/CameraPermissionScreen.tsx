@@ -1,24 +1,21 @@
 import { Camera, Zap } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
 
 interface CameraPermissionScreenProps {
   onAllow: (gender: "F" | "M") => void;
+  onNotNow: () => void;
 }
 
 export function CameraPermissionScreen({
   onAllow,
+  onNotNow,
 }: CameraPermissionScreenProps) {
   const [selectedGender, setSelectedGender] = useState<"F" | "M" | null>(null);
-  const location = useLocation();
-
-  // Check if this is a navigation back (from history state)
-  const isNavigatingBack = location.state?.fromForward === false;
 
   return (
     <motion.div
-      initial={isNavigatingBack ? false : { opacity: 0, x: 100 }}
+      initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
@@ -49,10 +46,10 @@ export function CameraPermissionScreen({
 
       {/* Camera Icon */}
       <motion.div
-        initial={isNavigatingBack ? false : { scale: 0.8, opacity: 0 }}
+        initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{
-          delay: isNavigatingBack ? 0 : 0.2,
+          delay: 0.2,
           duration: 0.5,
           type: "spring",
           stiffness: 200,
@@ -92,9 +89,9 @@ export function CameraPermissionScreen({
 
       {/* Content */}
       <motion.div
-        initial={isNavigatingBack ? false : { y: 20, opacity: 0 }}
+        initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: isNavigatingBack ? 0 : 0.4, duration: 0.5 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
         className="text-center mb-8 max-w-sm"
       >
         <h2 className="text-white mb-4">need ur camera real quick 📸</h2>
@@ -106,9 +103,9 @@ export function CameraPermissionScreen({
         </p>
 
         <motion.div
-          initial={isNavigatingBack ? false : { opacity: 0 }}
+          initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: isNavigatingBack ? 0 : 0.6 }}
+          transition={{ delay: 0.6 }}
           className="mt-6 px-4 py-3 rounded-full bg-yellow-400/20 backdrop-blur-sm border border-yellow-400/30 inline-block"
         >
           <p className="text-yellow-400">🔒 nobody sees ur pic but u</p>
@@ -117,9 +114,9 @@ export function CameraPermissionScreen({
 
       {/* Gender Selection */}
       <motion.div
-        initial={isNavigatingBack ? false : { y: 20, opacity: 0 }}
+        initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: isNavigatingBack ? 0 : 0.5, duration: 0.5 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
         className="w-full mb-8"
       >
         <p
@@ -158,9 +155,9 @@ export function CameraPermissionScreen({
 
       {/* Buttons */}
       <motion.div
-        initial={isNavigatingBack ? false : { y: 20, opacity: 0 }}
+        initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: isNavigatingBack ? 0 : 0.6, duration: 0.5 }}
+        transition={{ delay: 0.6, duration: 0.5 }}
         className="w-full flex flex-col gap-3"
       >
         <motion.button
@@ -191,6 +188,14 @@ export function CameraPermissionScreen({
               className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12"
             />
           )}
+        </motion.button>
+
+        <motion.button
+          whileTap={{ scale: 0.98 }}
+          onClick={onNotNow}
+          className="w-full bg-white/10 backdrop-blur-sm text-white/70 py-4 rounded-full border-2 border-white/20 active:bg-white/20 transition-colors"
+        >
+          nah not rn
         </motion.button>
       </motion.div>
     </motion.div>
