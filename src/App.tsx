@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { CameraPermissionScreen } from "./components/CameraPermissionScreen";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { ResultScreen } from "./components/ResultScreen";
@@ -9,7 +9,6 @@ import { getRandomNameByGrade } from "./utils/prob";
 
 function App() {
   const navigate = useNavigate();
-  const location = useLocation();
   const [capturedPhoto, setCapturedPhoto] = useState<string | null>(null);
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [gender, setGender] = useState<"F" | "M">("F");
@@ -25,7 +24,6 @@ function App() {
   });
 
   const handleStart = () => {
-    maxReachedIndexRef.current = 1; // Update max index when navigating forward programmatically
     navigate("/permission");
   };
 
@@ -42,7 +40,9 @@ function App() {
         const reader = new FileReader();
         reader.onload = (event) => {
           const photoData = event.target?.result as string;
-          handleCapture(photoData);
+          if (photoData) {
+            handleCapture(photoData);
+          }
         };
         reader.readAsDataURL(file);
       }
@@ -56,7 +56,6 @@ function App() {
 
   const handleCapture = (photoData: string) => {
     setCapturedPhoto(photoData);
-    maxReachedIndexRef.current = 2; // Update max index for loading screen
     navigate("/loading");
 
     // Simulate 3 second analysis
@@ -91,7 +90,6 @@ function App() {
       });
 
       // Replace loading screen in history so back button goes to permission screen
-      maxReachedIndexRef.current = 3; // Update max index for result screen
       navigate("/result", { replace: true });
     }, 3000);
   };
@@ -108,47 +106,6 @@ function App() {
   const handleBackFromResult = () => {
     navigate(-1);
   };
-
-  // Prevent forward navigation - only allow backward navigation
-  const maxReachedIndexRef = useRef(0);
-
-  useEffect(() => {
-    const pathOrder = ["/", "/permission", "/loading", "/result"];
-    const currentIndex = pathOrder.indexOf(location.pathname);
-
-    if (currentIndex === -1) return;
-
-    // If current index is greater than max reached, user navigated forward
-    // This means they're trying to access a page they already left
-    if (currentIndex > maxReachedIndexRef.current) {
-      // Block forward navigation by replacing with home
-      navigate("/", { replace: true });
-    } else {
-      // Update max reached index when moving backward
-      maxReachedIndexRef.current = currentIndex;
-    }
-  }, [location.pathname, navigate]);
-
-  // Prevent forward navigation completely by manipulating history
-  useEffect(() => {
-    // Push a dummy state to prevent forward navigation
-    const preventForward = () => {
-      window.history.pushState(null, '', window.location.pathname);
-    };
-
-    // Listen to popstate (browser back/forward buttons)
-    const handlePopState = () => {
-      // Immediately push current state back to prevent forward navigation
-      preventForward();
-    };
-
-    window.addEventListener('popstate', handlePopState);
-    preventForward();
-
-    return () => {
-      window.removeEventListener('popstate', handlePopState);
-    };
-  }, []);
 
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
