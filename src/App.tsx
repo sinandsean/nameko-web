@@ -87,10 +87,8 @@ function App() {
         reasons,
       });
 
-      // Clear history and set up clean navigation stack: home -> result
-      // This ensures back button always goes to home
-      window.history.pushState(null, '', '/');
-      navigate("/result");
+      // Replace loading screen in history so back button goes to permission screen
+      navigate("/result", { replace: true });
     }, 3000);
   };
 
@@ -104,7 +102,7 @@ function App() {
   };
 
   const handleBackToHome = () => {
-    navigate("/");
+    navigate(-1);
   };
 
   return (
