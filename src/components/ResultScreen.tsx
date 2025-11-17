@@ -22,7 +22,6 @@ export function ResultScreen({
 }: ResultScreenProps) {
   const [showConfetti, setShowConfetti] = useState(true);
   const [isPlayingKorean, setIsPlayingKorean] = useState(false);
-  const [isPlayingEnglish, setIsPlayingEnglish] = useState(false);
 
   // Pre-generate confetti data to avoid Math.random() during render
   const [confettiData] = useState(() => {
@@ -44,16 +43,6 @@ export function ResultScreen({
     utterance.rate = 0.8;
     utterance.pitch = 1.0;
     utterance.onend = () => setIsPlayingKorean(false);
-    speechSynthesis.speak(utterance);
-  };
-
-  const playEnglishPronunciation = () => {
-    setIsPlayingEnglish(true);
-    const utterance = new SpeechSynthesisUtterance(generatedName.romanization);
-    utterance.lang = "en-US";
-    utterance.rate = 0.7;
-    utterance.pitch = 1.0;
-    utterance.onend = () => setIsPlayingEnglish(false);
     speechSynthesis.speak(utterance);
   };
 
@@ -213,29 +202,12 @@ export function ResultScreen({
             </motion.button>
           </div>
 
-          <div className="flex items-center justify-center gap-3">
-            <p
-              className="text-white/80"
-              style={{ fontSize: "1.75rem", fontWeight: "700" }}
-            >
-              {generatedName.romanization}
-            </p>
-            <motion.button
-              whileTap={{ scale: 0.9 }}
-              onClick={playEnglishPronunciation}
-              className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
-                isPlayingEnglish
-                  ? "bg-yellow-400 text-black"
-                  : "bg-white/10 text-white/60 hover:bg-white/20"
-              }`}
-              disabled={isPlayingEnglish}
-            >
-              <Volume2
-                className={`w-5 h-5 ${isPlayingEnglish ? "animate-pulse" : ""}`}
-                strokeWidth={2.5}
-              />
-            </motion.button>
-          </div>
+          <p
+            className="text-white/80 text-center"
+            style={{ fontSize: "1.75rem", fontWeight: "700" }}
+          >
+            {generatedName.romanization}
+          </p>
         </motion.div>
 
         {/* Tags */}
