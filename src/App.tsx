@@ -23,12 +23,13 @@ function App() {
     ],
   });
 
-  const handleGenderSelect = (selectedGender: "F" | "M") => {
-    setGender(selectedGender);
+  const handleStart = () => {
     navigate("/permission");
   };
 
-  const handleAllow = () => {
+  const handleAllow = (selectedGender: "F" | "M") => {
+    setGender(selectedGender);
+
     // Create file input element for photo selection
     const input = document.createElement("input");
     input.type = "file";
@@ -111,7 +112,7 @@ function App() {
       {/* Mobile container */}
       <div className="max-w-md mx-auto min-h-screen bg-white relative">
         <Routes>
-          <Route path="/" element={<WelcomeScreen onSelectGender={handleGenderSelect} />} />
+          <Route path="/" element={<WelcomeScreen onStart={handleStart} />} />
           <Route path="/permission" element={
             <CameraPermissionScreen
               onAllow={handleAllow}

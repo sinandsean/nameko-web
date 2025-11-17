@@ -1,12 +1,14 @@
 import { motion } from 'motion/react';
 import { Camera, Zap } from 'lucide-react';
+import { useState } from 'react';
 
 interface CameraPermissionScreenProps {
-  onAllow: () => void;
+  onAllow: (gender: "F" | "M") => void;
   onNotNow: () => void;
 }
 
 export function CameraPermissionScreen({ onAllow, onNotNow }: CameraPermissionScreenProps) {
+  const [selectedGender, setSelectedGender] = useState<"F" | "M" | null>(null);
   return (
     <motion.div
       initial={{ opacity: 0, x: 100 }}
@@ -78,7 +80,7 @@ export function CameraPermissionScreen({ onAllow, onNotNow }: CameraPermissionSc
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.5 }}
-        className="text-center mb-12 max-w-sm"
+        className="text-center mb-8 max-w-sm"
       >
         <h2 className="text-white mb-4">
           need ur camera real quick 📸
@@ -86,7 +88,7 @@ export function CameraPermissionScreen({ onAllow, onNotNow }: CameraPermissionSc
         <p className="text-white/70 leading-relaxed" style={{ fontSize: '1.125rem' }}>
           gonna read ur face & match u with the perfect korean name
         </p>
-        
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -99,6 +101,44 @@ export function CameraPermissionScreen({ onAllow, onNotNow }: CameraPermissionSc
         </motion.div>
       </motion.div>
 
+      {/* Gender Selection */}
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        className="w-full mb-8"
+      >
+        <p className="text-white/70 text-center mb-4" style={{ fontSize: '0.875rem' }}>
+          pick ur vibe first
+        </p>
+        <div className="flex gap-3">
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setSelectedGender("F")}
+            className={`flex-1 py-4 rounded-2xl border-2 transition-all ${
+              selectedGender === "F"
+                ? "bg-yellow-400 border-yellow-400 text-black"
+                : "bg-white/10 border-white/20 text-white/70"
+            }`}
+          >
+            <div className="text-2xl mb-1">👸</div>
+            <div style={{ fontSize: '1rem', fontWeight: '700' }}>Female</div>
+          </motion.button>
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setSelectedGender("M")}
+            className={`flex-1 py-4 rounded-2xl border-2 transition-all ${
+              selectedGender === "M"
+                ? "bg-yellow-400 border-yellow-400 text-black"
+                : "bg-white/10 border-white/20 text-white/70"
+            }`}
+          >
+            <div className="text-2xl mb-1">🤴</div>
+            <div style={{ fontSize: '1rem', fontWeight: '700' }}>Male</div>
+          </motion.button>
+        </div>
+      </motion.div>
+
       {/* Buttons */}
       <motion.div
         initial={{ y: 20, opacity: 0 }}
@@ -107,18 +147,27 @@ export function CameraPermissionScreen({ onAllow, onNotNow }: CameraPermissionSc
         className="w-full flex flex-col gap-3"
       >
         <motion.button
-          whileTap={{ scale: 0.98 }}
-          onClick={onAllow}
-          className="w-full bg-yellow-400 text-black py-5 rounded-full shadow-2xl relative overflow-hidden"
+          whileTap={selectedGender ? { scale: 0.98 } : {}}
+          onClick={() => selectedGender && onAllow(selectedGender)}
+          disabled={!selectedGender}
+          className={`w-full py-5 rounded-full shadow-2xl relative overflow-hidden transition-all ${
+            selectedGender
+              ? "bg-yellow-400 text-black"
+              : "bg-white/10 text-white/30 cursor-not-allowed"
+          }`}
         >
-          <span className="relative z-10" style={{ fontSize: '1.125rem', fontWeight: '800' }}>ALLOW CAMERA 🔥</span>
-          <motion.div
-            animate={{ x: ['-100%', '200%'] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'linear', repeatDelay: 1 }}
-            className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12"
-          />
+          <span className="relative z-10" style={{ fontSize: '1.125rem', fontWeight: '800' }}>
+            ALLOW CAMERA 🔥
+          </span>
+          {selectedGender && (
+            <motion.div
+              animate={{ x: ['-100%', '200%'] }}
+              transition={{ duration: 2, repeat: Infinity, ease: 'linear', repeatDelay: 1 }}
+              className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12"
+            />
+          )}
         </motion.button>
-        
+
         <motion.button
           whileTap={{ scale: 0.98 }}
           onClick={onNotNow}

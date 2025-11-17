@@ -2,10 +2,10 @@ import { Zap } from "lucide-react";
 import { motion } from "motion/react";
 
 interface WelcomeScreenProps {
-  onSelectGender: (gender: "F" | "M") => void;
+  onStart: () => void;
 }
 
-export function WelcomeScreen({ onSelectGender }: WelcomeScreenProps) {
+export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -125,7 +125,7 @@ export function WelcomeScreen({ onSelectGender }: WelcomeScreenProps) {
           >
             what's ur
             <br />
-            <span className="text-yellow-400">Korean name</span>
+            <span className="text-yellow-400">korean name</span>
           </h1>
         </motion.div>
         <p
@@ -146,32 +146,31 @@ export function WelcomeScreen({ onSelectGender }: WelcomeScreenProps) {
         </motion.div>
       </motion.div>
 
-      {/* Bottom Actions - Gender Selection */}
+      {/* Bottom Actions */}
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.5 }}
         className="w-full flex flex-col items-center gap-4 mb-8"
       >
-        {/* Female Button */}
         <motion.button
           whileTap={{ scale: 0.95 }}
           animate={{
             boxShadow: [
-              "0 10px 40px -10px rgba(236, 72, 153, 0.6)",
-              "0 10px 60px -10px rgba(236, 72, 153, 0.8)",
-              "0 10px 40px -10px rgba(236, 72, 153, 0.6)",
+              "0 10px 40px -10px rgba(250, 204, 21, 0.6)",
+              "0 10px 60px -10px rgba(250, 204, 21, 0.8)",
+              "0 10px 40px -10px rgba(250, 204, 21, 0.6)",
             ],
           }}
           transition={{ duration: 2, repeat: Infinity }}
-          onClick={() => onSelectGender("F")}
-          className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-6 rounded-full shadow-2xl relative overflow-hidden"
+          onClick={onStart}
+          className="w-full bg-yellow-400 text-black py-6 rounded-full shadow-2xl relative overflow-hidden"
         >
           <span
             className="relative z-10 flex items-center justify-center gap-2"
             style={{ fontSize: "1.125rem", fontWeight: "800" }}
           >
-            I'M A GIRL 👩
+            LET'S GO 🔥
           </span>
           {/* Shimmer effect */}
           <motion.div
@@ -186,41 +185,7 @@ export function WelcomeScreen({ onSelectGender }: WelcomeScreenProps) {
           />
         </motion.button>
 
-        {/* Male Button */}
-        <motion.button
-          whileTap={{ scale: 0.95 }}
-          animate={{
-            boxShadow: [
-              "0 10px 40px -10px rgba(59, 130, 246, 0.6)",
-              "0 10px 60px -10px rgba(59, 130, 246, 0.8)",
-              "0 10px 40px -10px rgba(59, 130, 246, 0.6)",
-            ],
-          }}
-          transition={{ duration: 2, repeat: Infinity, delay: 0.1 }}
-          onClick={() => onSelectGender("M")}
-          className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-6 rounded-full shadow-2xl relative overflow-hidden"
-        >
-          <span
-            className="relative z-10 flex items-center justify-center gap-2"
-            style={{ fontSize: "1.125rem", fontWeight: "800" }}
-          >
-            I'M A BOY 👨
-          </span>
-          {/* Shimmer effect */}
-          <motion.div
-            animate={{ x: ["-100%", "200%"] }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "linear",
-              repeatDelay: 1,
-              delay: 0.1,
-            }}
-            className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12"
-          />
-        </motion.button>
-
-        <button className="text-white/50 mt-2">
+        <button className="text-white/50">
           <span>how does this work?</span>
         </button>
       </motion.div>
