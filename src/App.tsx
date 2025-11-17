@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { CameraPermissionScreen } from "./components/CameraPermissionScreen";
 import { CameraScreen } from "./components/CameraScreen";
 import { LoadingScreen } from "./components/LoadingScreen";
@@ -7,10 +8,8 @@ import { ShareSheet } from "./components/ShareSheet";
 import { WelcomeScreen } from "./components/WelcomeScreen";
 import { getRandomNameByGrade } from "./utils/prob";
 
-type Screen = "welcome" | "permission" | "camera" | "loading" | "result";
-
 function App() {
-  const [currentScreen, setCurrentScreen] = useState<Screen>("welcome");
+  const navigate = useNavigate();
   const [capturedPhoto, setCapturedPhoto] = useState<string | null>(null);
   const [showShareSheet, setShowShareSheet] = useState(false);
   const [gender, setGender] = useState<"F" | "M">("F");
@@ -27,20 +26,20 @@ function App() {
 
   const handleGenderSelect = (selectedGender: "F" | "M") => {
     setGender(selectedGender);
-    setCurrentScreen("permission");
+    navigate("/permission");
   };
 
   const handleAllow = () => {
-    setCurrentScreen("camera");
+    navigate("/camera");
   };
 
   const handleNotNow = () => {
-    setCurrentScreen("welcome");
+    navigate("/");
   };
 
   const handleCapture = (photoData: string) => {
     setCapturedPhoto(photoData);
-    setCurrentScreen("loading");
+    navigate("/loading");
 
     // Simulate 3 second analysis
     setTimeout(() => {
@@ -73,13 +72,13 @@ function App() {
         reasons,
       });
 
-      setCurrentScreen("result");
+      navigate("/result");
     }, 3000);
   };
 
   const handleTryAgain = () => {
     setCapturedPhoto(null);
-    setCurrentScreen("camera");
+    navigate("/camera");
   };
 
   const handleShare = () => {
@@ -87,40 +86,38 @@ function App() {
   };
 
   const handleBack = () => {
-    setCurrentScreen("welcome");
+    navigate(-1);
   };
 
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
       {/* Mobile container */}
       <div className="max-w-md mx-auto min-h-screen bg-white relative">
-        {currentScreen === "welcome" && (
-          <WelcomeScreen onSelectGender={handleGenderSelect} />
-        )}
-
-        {currentScreen === "permission" && (
-          <CameraPermissionScreen
-            onAllow={handleAllow}
-            onNotNow={handleNotNow}
-          />
-        )}
-
-        {currentScreen === "camera" && (
-          <CameraScreen onCapture={handleCapture} onBack={handleBack} />
-        )}
-
-        {currentScreen === "loading" && capturedPhoto && (
-          <LoadingScreen capturedPhoto={capturedPhoto} />
-        )}
-
-        {currentScreen === "result" && capturedPhoto && (
-          <ResultScreen
-            capturedPhoto={capturedPhoto}
-            generatedName={generatedName}
-            onTryAgain={handleTryAgain}
-            onShare={handleShare}
-          />
-        )}
+        <Routes>
+          <Route path="/" element={<WelcomeScreen onSelectGender={handleGenderSelect} />} />
+          <Route path="/permission" element={
+            <CameraPermissionScreen
+              onAllow={handleAllow}
+              onNotNow={handleNotNow}
+            />
+          } />
+          <Route path="/camera" element={
+            <CameraScreen onCapture={handleCapture} onBack={handleBack} />
+          } />
+          <Route path="/loading" element={
+            capturedPhoto ? <LoadingScreen capturedPhoto={capturedPhoto} /> : null
+          } />
+          <Route path="/result" element={
+            capturedPhoto ? (
+              <ResultScreen
+                capturedPhoto={capturedPhoto}
+                generatedName={generatedName}
+                onTryAgain={handleTryAgain}
+                onShare={handleShare}
+              />
+            ) : null
+          } />
+        </Routes>
 
         {showShareSheet && (
           <ShareSheet
