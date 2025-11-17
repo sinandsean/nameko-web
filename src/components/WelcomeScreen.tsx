@@ -125,7 +125,7 @@ export function WelcomeScreen({ onSelectGender }: WelcomeScreenProps) {
           >
             what's ur
             <br />
-            <span className="text-yellow-400">korean name</span>
+            <span className="text-yellow-400">Korean name</span>
           </h1>
         </motion.div>
         <p

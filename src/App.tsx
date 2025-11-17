@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { CameraPermissionScreen } from "./components/CameraPermissionScreen";
-import { CameraScreen } from "./components/CameraScreen";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { ResultScreen } from "./components/ResultScreen";
 import { ShareSheet } from "./components/ShareSheet";
@@ -30,7 +29,22 @@ function App() {
   };
 
   const handleAllow = () => {
-    navigate("/camera");
+    // Create file input element for photo selection
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = "image/*";
+    input.onchange = (e) => {
+      const file = (e.target as HTMLInputElement).files?.[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          const photoData = event.target?.result as string;
+          handleCapture(photoData);
+        };
+        reader.readAsDataURL(file);
+      }
+    };
+    input.click();
   };
 
   const handleNotNow = () => {
@@ -81,15 +95,11 @@ function App() {
 
   const handleTryAgain = () => {
     setCapturedPhoto(null);
-    navigate("/camera");
+    navigate("/");
   };
 
   const handleShare = () => {
     setShowShareSheet(true);
-  };
-
-  const handleBack = () => {
-    navigate(-1);
   };
 
   const handleBackToHome = () => {
@@ -107,9 +117,6 @@ function App() {
               onAllow={handleAllow}
               onNotNow={handleNotNow}
             />
-          } />
-          <Route path="/camera" element={
-            <CameraScreen onCapture={handleCapture} onBack={handleBack} />
           } />
           <Route path="/loading" element={
             capturedPhoto ? <LoadingScreen capturedPhoto={capturedPhoto} /> : null
