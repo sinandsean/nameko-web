@@ -314,7 +314,7 @@ export function ResultScreen({
               style={{ fontSize: "1.125rem", fontWeight: "900" }}
             >
               <Share2 className="w-5 h-5" strokeWidth={3} />
-              SHARE THIS 🔥
+              SAVE IMAGE 💾
             </span>
             <motion.div
               animate={{ x: ["-100%", "200%"] }}

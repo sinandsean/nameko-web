@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Copy, Download } from 'lucide-react';
+import { X, Download } from 'lucide-react';
 
 interface ShareSheetProps {
   capturedPhoto: string | null;
@@ -11,38 +11,118 @@ interface ShareSheetProps {
 }
 
 export function ShareSheet({ capturedPhoto, generatedName, onClose }: ShareSheetProps) {
-  const shareTargets = [
-    { 
-      emoji: '📷', 
-      label: 'IG Story', 
-      gradient: 'from-purple-500 via-pink-500 to-orange-400'
-    },
-    { 
-      emoji: '🎵', 
-      label: 'TikTok', 
-      gradient: 'from-black to-gray-900'
-    },
-    { 
-      emoji: '👻', 
-      label: 'Snap', 
-      gradient: 'from-yellow-300 to-yellow-400'
-    },
-    { 
-      emoji: '💬', 
-      label: 'WhatsApp', 
-      gradient: 'from-green-500 to-green-600'
-    },
-    { 
-      emoji: '💙', 
-      label: 'Twitter', 
-      gradient: 'from-blue-400 to-blue-500'
-    },
-    { 
-      emoji: '📱', 
-      label: 'iMessage', 
-      gradient: 'from-blue-500 to-blue-600'
-    },
-  ];
+  const handleDownload = () => {
+    // Canvas를 사용해 이미지 생성
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    // 9:16 비율로 캔버스 설정
+    canvas.width = 1080;
+    canvas.height = 1920;
+
+    // 배경 - 검정색
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // 그라데이션 효과
+    const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+    gradient.addColorStop(0, 'rgba(250, 204, 21, 0.2)');
+    gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0)');
+    gradient.addColorStop(1, 'rgba(250, 204, 21, 0.1)');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // 데코레이션 이모지
+    ctx.font = '120px Arial';
+    ctx.fillText('🔥', 120, 240);
+    ctx.font = '100px Arial';
+    ctx.fillText('⚡', 900, 280);
+    ctx.font = '100px Arial';
+    ctx.fillText('💀', 150, 1620);
+    ctx.font = '80px Arial';
+    ctx.fillText('👑', 880, 1680);
+
+    // 사진 그리기 (있는 경우)
+    if (capturedPhoto) {
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => {
+        const size = 400;
+        const x = (canvas.width - size) / 2;
+        const y = 450;
+
+        // 노란색 빛 효과
+        ctx.shadowColor = 'rgba(250, 204, 21, 0.4)';
+        ctx.shadowBlur = 60;
+
+        // 회전된 사진 프레임
+        ctx.save();
+        ctx.translate(x + size / 2, y + size / 2);
+        ctx.rotate(0.1); // 약간 회전
+        ctx.strokeStyle = '#FACC15';
+        ctx.lineWidth = 12;
+        ctx.strokeRect(-size / 2, -size / 2, size, size);
+
+        // 둥근 모서리로 사진 그리기
+        ctx.clip();
+        ctx.drawImage(img, -size / 2, -size / 2, size, size);
+        ctx.restore();
+
+        ctx.shadowBlur = 0;
+
+        continueDrawing();
+      };
+      img.src = capturedPhoto;
+    } else {
+      continueDrawing();
+    }
+
+    function continueDrawing() {
+      if (!ctx) return;
+
+      // "MY KOREAN NAME IS" 텍스트
+      ctx.font = 'bold 48px Arial';
+      ctx.fillStyle = 'rgba(250, 204, 21, 0.4)';
+      ctx.textAlign = 'center';
+      ctx.fillText('MY KOREAN NAME IS', canvas.width / 2, 1000);
+
+      // 한글 이름 (큰 글씨)
+      ctx.font = 'bold 200px Arial';
+      ctx.fillStyle = '#FACC15';
+      ctx.shadowColor = 'rgba(250, 204, 21, 0.8)';
+      ctx.shadowBlur = 40;
+      ctx.fillText(generatedName.korean, canvas.width / 2, 1200);
+      ctx.shadowBlur = 0;
+
+      // 로마자 표기
+      ctx.font = 'bold 80px Arial';
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+      ctx.fillText(generatedName.romanization, canvas.width / 2, 1320);
+
+      // 하단 브랜딩
+      ctx.font = 'bold 42px Arial';
+      ctx.fillStyle = '#000000';
+      ctx.fillRect(canvas.width / 2 - 280, 1760, 560, 80);
+      ctx.fillStyle = '#FACC15';
+      ctx.fillRect(canvas.width / 2 - 280, 1760, 560, 80);
+      ctx.fillStyle = '#000000';
+      ctx.fillText('GET URS @ KOREAN NAME GEN', canvas.width / 2, 1815);
+
+      // Canvas를 이미지로 변환하여 다운로드
+      canvas.toBlob((blob) => {
+        if (!blob) return;
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `korean-name-${generatedName.romanization.replace(/\s+/g, '-')}.png`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 'image/png');
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -163,58 +243,44 @@ export function ShareSheet({ capturedPhoto, generatedName, onClose }: ShareSheet
             </div>
           </motion.div>
 
-          {/* Quick Actions */}
+          {/* Save Image Button */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="flex gap-3 mb-6"
+            className="mb-6"
           >
-            <button className="flex-1 bg-yellow-400 text-black py-4 rounded-full shadow-lg flex items-center justify-center gap-2 border-2 border-yellow-300 active:scale-95 transition-transform">
-              <Copy className="w-5 h-5" strokeWidth={3} />
-              <span style={{ fontWeight: '800' }}>COPY</span>
-            </button>
-            <button className="flex-1 bg-white/10 backdrop-blur-sm text-white py-4 rounded-full border-2 border-white/20 flex items-center justify-center gap-2 active:scale-95 transition-transform">
-              <Download className="w-5 h-5" strokeWidth={3} />
-              <span style={{ fontWeight: '800' }}>SAVE</span>
+            <button
+              onClick={handleDownload}
+              className="w-full bg-yellow-400 text-black py-5 rounded-full shadow-2xl flex items-center justify-center gap-3 border-2 border-yellow-300 active:scale-95 transition-transform relative overflow-hidden"
+            >
+              <motion.div
+                animate={{ x: ["-100%", "200%"] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "linear",
+                  repeatDelay: 1,
+                }}
+                className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12"
+              />
+              <Download className="w-6 h-6 relative z-10" strokeWidth={3} />
+              <span className="relative z-10" style={{ fontSize: '1.125rem', fontWeight: '900' }}>SAVE IMAGE 💾</span>
             </button>
           </motion.div>
 
-          {/* Share Targets Grid */}
-          <div className="mb-4">
-            <p className="text-white/60 mb-4" style={{ fontWeight: '700' }}>
-              post it 👇
-            </p>
-            <div className="grid grid-cols-3 gap-3">
-              {shareTargets.map((target, index) => (
-                <motion.button
-                  key={target.label}
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.3 + index * 0.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex flex-col items-center gap-3 p-4 rounded-2xl bg-white/5 backdrop-blur-sm border-2 border-white/10 active:bg-white/10 transition-colors"
-                >
-                  <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${target.gradient} flex items-center justify-center shadow-lg text-2xl border-2 border-white/20`}>
-                    {target.emoji}
-                  </div>
-                  <span className="text-white/80" style={{ fontSize: '0.75rem', fontWeight: '700' }}>
-                    {target.label}
-                  </span>
-                </motion.button>
-              ))}
-            </div>
-          </div>
-
-          {/* Viral CTA */}
+          {/* Info Text */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-center mt-6"
+            transition={{ delay: 0.3 }}
+            className="text-center"
           >
-            <p className="text-white/40" style={{ fontWeight: '600' }}>
-              💀 tag @koreannamegen to get featured
+            <p className="text-white/60 mb-2" style={{ fontWeight: '600' }}>
+              📱 save & share on social media
+            </p>
+            <p className="text-white/40" style={{ fontSize: '0.875rem', fontWeight: '600' }}>
+              💀 share ur vibe with the world
             </p>
           </motion.div>
         </motion.div>
