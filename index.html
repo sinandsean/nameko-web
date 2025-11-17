@@ -5,10 +5,64 @@
     <link rel="icon" type="image/svg+xml" href="/nameko-web/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>namekoweb</title>
-    <script type="module" crossorigin src="/nameko-web/assets/index-a4DqZjLq.js"></script>
+    <style>
+      /* Loading screen - shown while JS loads */
+      #app-loader {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      #app-loader.loaded {
+        animation: fadeOut 0.3s ease forwards;
+      }
+      @keyframes fadeOut {
+        to { opacity: 0; visibility: hidden; }
+      }
+      .loader-content {
+        text-align: center;
+      }
+      .loader-icon {
+        width: 80px;
+        height: 80px;
+        background: #FACC15;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 24px;
+        animation: pulse 1.5s ease-in-out infinite;
+        box-shadow: 0 0 60px rgba(250, 204, 21, 0.5);
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+      }
+      .loader-text {
+        color: #FACC15;
+        font-size: 20px;
+        font-weight: 800;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+    </style>
+    <script type="module" crossorigin src="/nameko-web/assets/index-CqmT_SoH.js"></script>
+    <link rel="modulepreload" crossorigin href="/nameko-web/assets/vendor-react-Br23B7HK.js">
+    <link rel="modulepreload" crossorigin href="/nameko-web/assets/vendor-motion-DzIWxjy2.js">
+    <link rel="modulepreload" crossorigin href="/nameko-web/assets/vendor-icons-BkNaJk9y.js">
     <link rel="stylesheet" crossorigin href="/nameko-web/assets/index-uMugHwAC.css">
   </head>
   <body>
+    <div id="app-loader">
+      <div class="loader-content">
+        <div class="loader-icon">
+          <span style="font-size: 40px;">⚡</span>
+        </div>
+        <div class="loader-text">LOADING...</div>
+      </div>
+    </div>
     <div id="root"></div>
   </body>
 </html>
