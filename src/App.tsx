@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from "react";
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { CameraPermissionScreen } from "./components/CameraPermissionScreen";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { ResultScreen } from "./components/ResultScreen";
@@ -48,11 +48,6 @@ function App() {
       }
     };
     input.click();
-  };
-
-  const handleNotNow = () => {
-    isNavigatingRef.current = true;
-    navigate("/", { state: { fromForward: false } });
   };
 
   const handleCapture = (photoData: string) => {
@@ -109,7 +104,7 @@ function App() {
 
   const handleBackFromResult = () => {
     isNavigatingRef.current = true;
-    navigate('/permission', { state: { fromForward: false } });
+    navigate("/permission", { state: { fromForward: false } });
   };
 
   // Track the maximum index reached to prevent browser forward navigation
@@ -117,7 +112,7 @@ function App() {
   const isNavigatingRef = useRef(false);
 
   useEffect(() => {
-    const pathOrder = ['/', '/permission', '/loading', '/result'];
+    const pathOrder = ["/", "/permission", "/loading", "/result"];
     const currentIndex = pathOrder.indexOf(location.pathname);
 
     if (currentIndex === -1) return;
@@ -125,14 +120,17 @@ function App() {
     // Skip blocking if this is a programmatic navigation (from our app)
     if (isNavigatingRef.current) {
       isNavigatingRef.current = false;
-      maxReachedIndexRef.current = Math.max(maxReachedIndexRef.current, currentIndex);
+      maxReachedIndexRef.current = Math.max(
+        maxReachedIndexRef.current,
+        currentIndex
+      );
       return;
     }
 
     // Block only browser forward navigation (trying to go beyond max reached)
     if (currentIndex > maxReachedIndexRef.current) {
       // This is browser forward button - block it
-      navigate('/', { replace: true });
+      navigate("/", { replace: true });
     } else {
       // This is browser back button - allow it
       maxReachedIndexRef.current = currentIndex;
@@ -145,26 +143,32 @@ function App() {
       <div className="max-w-md mx-auto min-h-screen bg-white relative">
         <Routes>
           <Route path="/" element={<WelcomeScreen onStart={handleStart} />} />
-          <Route path="/permission" element={
-            <CameraPermissionScreen
-              onAllow={handleAllow}
-              onNotNow={handleNotNow}
-            />
-          } />
-          <Route path="/loading" element={
-            capturedPhoto ? <LoadingScreen capturedPhoto={capturedPhoto} /> : null
-          } />
-          <Route path="/result" element={
-            capturedPhoto ? (
-              <ResultScreen
-                capturedPhoto={capturedPhoto}
-                generatedName={generatedName}
-                onTryAgain={handleTryAgain}
-                onShare={handleShare}
-                onBack={handleBackFromResult}
-              />
-            ) : null
-          } />
+          <Route
+            path="/permission"
+            element={<CameraPermissionScreen onAllow={handleAllow} />}
+          />
+          <Route
+            path="/loading"
+            element={
+              capturedPhoto ? (
+                <LoadingScreen capturedPhoto={capturedPhoto} />
+              ) : null
+            }
+          />
+          <Route
+            path="/result"
+            element={
+              capturedPhoto ? (
+                <ResultScreen
+                  capturedPhoto={capturedPhoto}
+                  generatedName={generatedName}
+                  onTryAgain={handleTryAgain}
+                  onShare={handleShare}
+                  onBack={handleBackFromResult}
+                />
+              ) : null
+            }
+          />
         </Routes>
 
         {showShareSheet && (
