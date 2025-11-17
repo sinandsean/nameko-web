@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>namekoweb</title>
     <style>
+      /* Disable browser swipe gestures */
+      body {
+        overscroll-behavior-x: none;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
       /* Loading screen - shown while JS loads */
       #app-loader {
         position: fixed;

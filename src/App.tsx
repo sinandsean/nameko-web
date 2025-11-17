@@ -137,6 +137,27 @@ function App() {
     }
   }, [location.pathname, navigate]);
 
+  // Prevent forward navigation completely by manipulating history
+  useEffect(() => {
+    // Push a dummy state to prevent forward navigation
+    const preventForward = () => {
+      window.history.pushState(null, '', window.location.pathname);
+    };
+
+    // Listen to popstate (browser back/forward buttons)
+    const handlePopState = () => {
+      // Immediately push current state back to prevent forward navigation
+      preventForward();
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    preventForward();
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
       {/* Mobile container */}
