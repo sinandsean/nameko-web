@@ -1,4 +1,4 @@
-import { Flame, RefreshCw, Share2, Volume2, Zap } from "lucide-react";
+import { ArrowLeft, Flame, RefreshCw, Share2, Volume2, Zap } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 
@@ -12,6 +12,7 @@ interface ResultScreenProps {
   };
   onTryAgain: () => void;
   onShare: () => void;
+  onBack?: () => void;
 }
 
 export function ResultScreen({
@@ -19,6 +20,7 @@ export function ResultScreen({
   generatedName,
   onTryAgain,
   onShare,
+  onBack,
 }: ResultScreenProps) {
   const [showConfetti, setShowConfetti] = useState(true);
   const [isPlayingKorean, setIsPlayingKorean] = useState(false);
@@ -98,6 +100,19 @@ export function ResultScreen({
       />
 
       <div className="relative z-10 p-6 pb-12">
+        {/* Back Button */}
+        {onBack && (
+          <motion.button
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.1 }}
+            onClick={onBack}
+            className="absolute top-6 left-6 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border-2 border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-20"
+          >
+            <ArrowLeft className="w-6 h-6" strokeWidth={2.5} />
+          </motion.button>
+        )}
+
         {/* Top Decoration */}
         <motion.div
           initial={{ scale: 0, rotate: -180 }}

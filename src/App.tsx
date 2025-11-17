@@ -72,6 +72,9 @@ function App() {
         reasons,
       });
 
+      // Clear history and set up clean navigation stack: home -> result
+      // This ensures back button always goes to home
+      window.history.pushState(null, '', '/');
       navigate("/result");
     }, 3000);
   };
@@ -87,6 +90,10 @@ function App() {
 
   const handleBack = () => {
     navigate(-1);
+  };
+
+  const handleBackToHome = () => {
+    navigate("/");
   };
 
   return (
@@ -114,6 +121,7 @@ function App() {
                 generatedName={generatedName}
                 onTryAgain={handleTryAgain}
                 onShare={handleShare}
+                onBack={handleBackToHome}
               />
             ) : null
           } />
