@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>namekoweb</title>
     <style>
-      /* Disable browser swipe gestures */
+      /* Disable browser swipe gestures and overscroll bounce */
       body {
-        overscroll-behavior-x: none;
+        overscroll-behavior: none; /* Prevents bounce effect on all directions */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
         -webkit-user-select: none;
         user-select: none;
       }
