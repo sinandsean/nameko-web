@@ -1,15 +1,6 @@
 import { ArrowLeft, Flame, RefreshCw, Share2, Volume2, Zap } from "lucide-react";
 import { motion } from "motion/react";
-import { useEffect, useState } from "react";
-
-// Declare ReactNativeWebView type
-declare global {
-  interface Window {
-    ReactNativeWebView?: {
-      postMessage: (message: string) => void;
-    };
-  }
-}
+import { useState } from "react";
 
 interface ResultScreenProps {
   capturedPhoto: string;
@@ -33,15 +24,6 @@ export function ResultScreen({
 }: ResultScreenProps) {
   const [showConfetti, setShowConfetti] = useState(true);
   const [isPlayingKorean, setIsPlayingKorean] = useState(false);
-
-  // Notify React Native app to show ad when result screen is shown
-  useEffect(() => {
-    // Check if running in React Native WebView
-    if (window.ReactNativeWebView) {
-      const message = JSON.stringify({ type: "SHOW_AD_RESULT_SCREEN" });
-      window.ReactNativeWebView.postMessage(message);
-    }
-  }, []);
 
   // Pre-generate confetti data to avoid Math.random() during render
   const [confettiData] = useState(() => {

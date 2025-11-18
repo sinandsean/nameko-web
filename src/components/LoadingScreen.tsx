@@ -1,11 +1,37 @@
 import { motion } from 'motion/react';
 import { Zap } from 'lucide-react';
+import { useEffect } from 'react';
+
+// Declare ReactNativeWebView type
+declare global {
+  interface Window {
+    ReactNativeWebView?: {
+      postMessage: (message: string) => void;
+    };
+  }
+}
 
 interface LoadingScreenProps {
   capturedPhoto: string;
 }
 
 export function LoadingScreen({ capturedPhoto }: LoadingScreenProps) {
+  // Notify React Native app to show ad when loading screen is shown
+  useEffect(() => {
+    console.log("🎬 LoadingScreen mounted");
+    console.log("🔍 Checking for ReactNativeWebView:", !!window.ReactNativeWebView);
+
+    // Check if running in React Native WebView
+    if (window.ReactNativeWebView) {
+      const message = JSON.stringify({ type: "SHOW_AD_LOADING_SCREEN" });
+      console.log("📤 Sending message to React Native:", message);
+      window.ReactNativeWebView.postMessage(message);
+      console.log("✅ Message sent successfully");
+    } else {
+      console.log("ℹ️ Not running in React Native WebView");
+    }
+  }, []);
+
   const loadingPhrases = [
     'scanning ur face... 👀',
     'matching ur vibe... 🔥',
