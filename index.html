@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>namekoweb</title>
     <style>
       /* Disable browser swipe gestures and overscroll bounce */
@@ -12,6 +12,12 @@
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
         -webkit-user-select: none;
         user-select: none;
+        touch-action: pan-x pan-y; /* Disable pinch zoom, allow scrolling */
+      }
+
+      /* Prevent zoom on all elements */
+      * {
+        touch-action: manipulation; /* Disable double-tap zoom */
       }
 
       /* Loading screen - shown while JS loads */
